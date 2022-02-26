@@ -1,10 +1,10 @@
 <?php
     class Database{
         // DB Params
-        private $host = getenv("HOST");
-        private $db_name = getenv("DB");
-        private $username = getenv("USER");
-        private $password = getenv("PASS");
+        private $host = "i0rgccmrx3at3wv3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+        private $db_name = 	"xie5f21y231r8u9o";
+        private $username = "lj7mjlq2t2qvzdzh";
+        private $password = "ascwyhqzhb0nn7gx";
         private $conn;
 
 
