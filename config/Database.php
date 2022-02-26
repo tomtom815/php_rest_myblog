@@ -1,10 +1,10 @@
 <?php
     class Database{
         // DB Params
-        private $host = getenv("HOST");
-        private $db_name = getenv("DB");
-        private $username = getenv("USER");
-        private $password = getenv("PASS");
+        private $host = "localhost";
+        private $db_name = "myblog";
+        private $username = "root";
+        private $password = "";
         private $conn;
 
 

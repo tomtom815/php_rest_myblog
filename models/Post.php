@@ -119,7 +119,7 @@
         //Update post
         public function update(){
             //Create query
-            $query = 'UPDATE' . $this->table . '
+            $query = 'UPDATE ' . $this->table . '
             SET 
                 title = :title,
                 body = :body,
@@ -156,7 +156,29 @@
             return false;
 
         }
-        
+        //Delete Post
+        public function delete(){
+            //Create query
+            $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id';
+
+            //Prepare Statement
+            $stmt = $this->conn->prepare($query);
+
+            //Clean Data
+            $this->id = htmlspecialchars(strip_tags($this->id));
+
+            //Bind Data
+            $stmt->bindParam(':id', $this->id);
+
+            //Execute query
+            if($stmt->execute()){
+                return true;
+            }
+
+            //Print error if something goes wrong
+            printf("Error: %s. \n", $stmt->error);
+            return false;
+        }
     }
 
 ?>
