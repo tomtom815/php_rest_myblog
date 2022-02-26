@@ -11,7 +11,7 @@
     $db = $database->connect();
 
     //Instantiate category object
-    $post = new Category($db);
+    $category = new Category($db);
 
     //Category read query
     $result = $category->read();
